@@ -1,5 +1,8 @@
 scriptencoding utf-8
 " vim: set fdm=marker foldlevel=0:
-" 
-syn match pandocBracketedCorrection /\]\@1<!\(\s\{,3}\|^\)\[[^\[\]]\{-}\]\(\s\+\|$\)[\[(]\@!/
-hi link pandocBracketedCorrection Identifier
+
+" Use existing syn match rule for pandocNoLabel
+hi link pandocNoLabel pandocBracketedCorrection
+
+syn match pandocBracketedCorrection /\[[^\[\]]*\]/
+hi link pandocBracketedCorrection Boolean
