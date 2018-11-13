@@ -6,3 +6,8 @@ hi link pandocNoLabel pandocBracketedCorrection
 
 syn match pandocBracketedCorrection /\[[^\[\]]*\]/
 hi link pandocBracketedCorrection Boolean
+
+hi link pandocNoLabel pandocBracketedCorrectionInPipeTableHeader
+
+syn match pandocBracketedCorrectionInPipeTableHeader /\[[^\[\]]*\]/ contained containedin=pandocPipeTable
+hi link pandocBracketedCorrectionInPipeTableHeader Boolean
